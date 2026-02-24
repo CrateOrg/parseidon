@@ -1,0 +1,13 @@
+Object type|Object found|Filepath|Position|Context|Count
+URL|http://oddfooter.se/section1|./tests/test_files/header_footer_test.docx|Section: 1, default footer|http://oddfooter.se/section1|1
+URL|www.evenfooter.section1.com|./tests/test_files/header_footer_test.docx|Section: 1, even page footer|www.evenfooter.section1.com|1
+URL|https://oddfooter.nu/section2|./tests/test_files/header_footer_test.docx|Section: 3, default footer|https://oddfooter.nu/section2|1
+URL|https://evenfooter.nu/section2|./tests/test_files/header_footer_test.docx|Section: 3, even page footer|https://evenfooter.nu/section2|1
+URL|http://oddheader.se/section1|./tests/test_files/header_footer_test.docx|Section: 1, default header|http://oddheader.se/section1|1
+URL|www.evenheader.section1.com|./tests/test_files/header_footer_test.docx|Section: 1, even page header|www.evenheader.section1.com|1
+URL|https://oddheader.nu/section2|./tests/test_files/header_footer_test.docx|Section: 3, default header|https://oddheader.nu/section2|1
+URL|https://evenheader.nu/section2|./tests/test_files/header_footer_test.docx|Section: 3, even page header|https://evenheader.nu/section2|1
+Email|first_footer@section1.se|./tests/test_files/header_footer_test.docx|Section: 1, first page footer|first_footer@section1.se|1
+Email|first_footer@section2.se|./tests/test_files/header_footer_test.docx|Section: 2, first page footer|first_footer@section2.se|1
+Email|first_header@section1.se|./tests/test_files/header_footer_test.docx|Section: 1, first page header|first_header@section1.se|1
+Email|first_header@section2.se|./tests/test_files/header_footer_test.docx|Section: 2, first page header|first_header@section2.se|1

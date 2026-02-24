@@ -1,0 +1,26 @@
+Object type|Object found|Filepath|Position|Context|Count
+Doc_ID|FOI-X--9999--SE|./tests/test_files/pdf_test.pdf|Page: 1 Line: 1|FOI-X--9999--SE 123.21.0.22 Lorem ipsum|5
+IPv4|123.21.0.22|./tests/test_files/pdf_test.pdf|Page: 1 Line: 2|FOI-X--9999--SE 123.21.0.22 Lorem ipsum dolor|1
+IPv4|164.0.2.2|./tests/test_files/pdf_test.pdf|Page: 1 Line: 5|commodo consequat. Duis 164.0.2.2 aute irure dolor|1
+IPv4|2.2.0.2|./tests/test_files/pdf_test.pdf|Page: 1 Line: 30|pariatur. Excepteur sint 2.2.0.2 occaecat cupidatat non|1
+Doc_ID|FOI-X--9999--SE|./tests/test_files/pdf_test.pdf|Page: 2 Line: 1|FOI-X--9999--SE cillum dolore eu|5
+Tech/Protocol|IP|./tests/test_files/pdf_test.pdf|Page: 2 Line: 18|id est laborum. IP Mail ID Mac|1
+Tech/Protocol|URL|./tests/test_files/pdf_test.pdf|Page: 2 Line: 22|Mail ID Mac URL 162.2.18.0 user@gmail.com FOI|1
+IPv4|162.2.18.0|./tests/test_files/pdf_test.pdf|Page: 2 Line: 23|ID Mac URL 162.2.18.0 user@gmail.com FOI Memo|1
+Email|user@gmail.com|./tests/test_files/pdf_test.pdf|Page: 2 Line: 24|Mac URL 162.2.18.0 user@gmail.com FOI Memo 1234|1
+Doc_ID|FOI Memo 1234|./tests/test_files/pdf_test.pdf|Page: 2 Line: 25|URL 162.2.18.0 user@gmail.com FOI Memo 1234 01:21:45:67:89:AB https:// dummyurl.se/in/a/|1
+MAC|01:21:45:67:89:AB|./tests/test_files/pdf_test.pdf|Page: 2 Line: 26|FOI Memo 1234 01:21:45:67:89:AB https:// dummyurl.se/in/a/ table|1
+Doc_ID|FOI-X--9999--SE|./tests/test_files/pdf_test.pdf|Page: 3 Line: 1|FOI-X--9999--SE cillum dolore eu|5
+Email|valid.email_address@outlook.orq|./tests/test_files/pdf_test.pdf|Page: 3 Line: 21|fugiat nulla pariatur valid.email_address@outlook.orq . Excepteur sint|1
+URL|www.google.se|./tests/test_files/pdf_test.pdf|Page: 3 Line: 37|anim id est www.google.se laborum. Lorem ipsum|1
+URL|http://www.google.se/|./tests/test_files/pdf_test.pdf|Link at Page: 3 Line: 1|http://www.google.se/ mailto:valid.email_address@outlook.orq mailto:mailuser@usermail|1
+Doc_ID|FOI-X--9999--SE|./tests/test_files/pdf_test.pdf|Page: 4 Line: 1|FOI-X--9999--SE dolor in reprehenderit|5
+IPv4|77.77.77.77|./tests/test_files/pdf_test.pdf|Page: 4 Line: 9|id est laborum. 77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE|1
+Email|another_valid@email.net|./tests/test_files/pdf_test.pdf|Page: 4 Line: 11|laborum. 77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE Lorem ipsum|1
+Doc_ID|FOI-I--1337--SE|./tests/test_files/pdf_test.pdf|Page: 4 Line: 12|77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE Lorem ipsum dolor|1
+MAC|ABDC.1132.4576|./tests/test_files/pdf_test.pdf|Page: 4 Line: 37|id est laborum ABDC.1132.4576 Lorem ipsum dolor|1
+Doc_ID|FOI-X--9999--SE|./tests/test_files/pdf_test.pdf|Page: 5 Line: 1|FOI-X--9999--SE cillum dolore eu|5
+Email|mailman@mailservice.nu|./tests/test_files/pdf_test.pdf|Page: 5 Line: 6|aute irure dolor mailman@mailservice.nu in reprehenderit in|1
+Doc_ID|FOI-R--1121--SE|./tests/test_files/pdf_test.pdf|Page: 5 Line: 18|mollit anim id FOI-R--1121--SE est laborum. Lorem|1
+URL|http://properurlformat.yes|./tests/test_files/pdf_test.pdf|Page: 5 Line: 23|deserunt mollit anim http://properurlformat.yes id est laborum.|1
+URL|http://properurlformat.yes/|./tests/test_files/pdf_test.pdf|Link at Page: 5 Line: 1|http://properurlformat.yes/ mailto:mailman@mailservice.nu|1

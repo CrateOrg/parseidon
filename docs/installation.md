@@ -21,10 +21,10 @@ There is also an option to use OCR to extract the text from pictures/images in P
 * `tesseract-ocr`
 * `tesseract-ocr-swe` (for swedish language support)
 
-To install parseidon using `pip`, the following command is used:
+<!-- To install parseidon using `pip`, the following command is used:
 ```bash
 pip install parseidon
-```
+``` -->
 
 ### Run locally
 To manage dependencies and running the program locally, [`uv`](https://github.com/astral-sh/uv) is recommended to use.
@@ -39,12 +39,23 @@ To run unit-tests, run `uv run pytest`.
 Parseidon can also be installed locally using `pip:
 
 ```bash
-pip install -e .
+uv pip install -e .
 ```
 
 ### Docker
 The program can either be installed and ran through bash, or ran with docker.
 
+#### Run prebuilt image
+You can use the prebuilt image to run parseidon with Docker. Prebuilt images can be found at the [container registry](https://github.com/CrateOrg/parseidon/pkgs/container/parseidon).
+```bash
+# Run latest version
+docker run --rm -it --entrypoint /bin/bash ghcr.io/crateorg/parseidon:latest
+
+# Or run specific version
+docker run --rm -it --entrypoint /bin/bash ghcr.io/crateorg/parseidon:2.3.0
+```
+
+#### Manually build image
 To run the program with docker, you must have the docker engine installed on your machine.
 Then build the docker image with the following command from the projectroot:
 ```bash
@@ -70,6 +81,6 @@ Parseidon includes a test suite to ensure proper functionality in pattern matchi
 
 To run the test suite use the following command from the project root:
 ```bash
-pytest 
+uv run pytest
 ```
 for increase verbosity the flags `-v` or `-vv` can be used.

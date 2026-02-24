@@ -1,0 +1,4 @@
+Object type|Object found|Filepath|Position|Context|Count
+IPv4|18.88.88.192|./tests/test_files/inline_shape_test.docx|Inline shape: 1|kunna ha IP-adress 18.88.88.192 och ha en|1
+Tech/Protocol|IP-adress|./tests/test_files/inline_shape_test.docx|Inline shape: 1|skulle kunna ha IP-adress 18.88.88.192 och ha|1
+Tech/Protocol|CAT6|./tests/test_files/inline_shape_test.docx|Inline shape: 1|ha en inkommande CAT6-kabel.|1

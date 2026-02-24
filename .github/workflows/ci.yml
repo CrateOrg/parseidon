@@ -1,0 +1,60 @@
+# This workflow will run tests and lint the code
+
+name: CI
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  audit-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/shared
+
+      - name: Sync uv
+        run: uv sync --dev --frozen
+
+      - name: Audit
+        run: uv run pip-audit .
+
+  test-with-pytest:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/crateorg/parseidon:base
+    steps:
+    - uses: actions/checkout@v6
+
+    - uses: ./.github/actions/shared
+
+    - name: Sync uv
+      run: uv sync --dev --frozen
+        
+    - name: Test with pytest
+      run: uv run pytest -vv --junitxml=junit/test-results.xml --cov=src --cov-report=xml --cov-report=html
+
+  ruff-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/shared
+      
+      - name: Setup venv
+        run: uv venv
+
+      - name: Install the code linting and formatting tool Ruff
+        run: uv pip install ruff
+
+      - name: Lint code with Ruff
+        run: uv run ruff check --exclude=tests --extend-exclude=.venv --output-format=github

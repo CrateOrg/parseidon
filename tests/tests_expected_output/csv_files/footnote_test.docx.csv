@@ -1,0 +1,3 @@
+Object type|Object found|Filepath|Position|Context|Count
+URL|https://footnote3.se|./tests/test_files/footnote_test.docx|Footnote: 3|https://footnote3.se|1
+Email|footnote_1@gmail.com|./tests/test_files/footnote_test.docx|Footnote: 1|footnote_1@gmail.com|1

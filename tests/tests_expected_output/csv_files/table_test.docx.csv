@@ -1,0 +1,14 @@
+Object type|Object found|Filepath|Position|Context|Count
+IPv4|164.192.1.2|./tests/test_files/table_test.docx|Table: 1|00:00:00:0v:00:00 merged_horizontal@gmail.se AA:B3:12:CE:F0:00 164.192.1.2 12:eD:21:WC:Cb:11 1.1.c.2 90|1
+MAC|AA:B3:12:CE:F0:00|./tests/test_files/table_test.docx|Table: 1|http://localhost:1415 00:00:00:0v:00:00 merged_horizontal@gmail.se AA:B3:12:CE:F0:00 164.192.1.2 12:eD:21:WC:Cb:11 1.1.c.2|1
+Doc_ID|FOI Memo 1234|./tests/test_files/table_test.docx|Table: 1|IPv4 100000000000 m/s FOI Memo 1234 Url.not.valid..123/321 ::FF http://localhost:1415|1
+URL|https://merged-vertically.se|./tests/test_files/table_test.docx|Table: 1|https://merged-vertically.se Not..valid@email.se 500 bit/s|1
+URL|http://localhost:1415|./tests/test_files/table_test.docx|Table: 1|1234 Url.not.valid..123/321 ::FF http://localhost:1415 00:00:00:0v:00:00 merged_horizontal@gmail.se AA:B3:12:CE:F0:00|1
+Email|merged_horizontal@gmail.se|./tests/test_files/table_test.docx|Table: 1|::FF http://localhost:1415 00:00:00:0v:00:00 merged_horizontal@gmail.se AA:B3:12:CE:F0:00 164.192.1.2 12:eD:21:WC:Cb:11|1
+IPv6|::FF|./tests/test_files/table_test.docx|Table: 1|Memo 1234 Url.not.valid..123/321 ::FF http://localhost:1415 00:00:00:0v:00:00 merged_horizontal@gmail.se|1
+Unit|500 bit/s|./tests/test_files/table_test.docx|Table: 1|https://merged-vertically.se Not..valid@email.se 500 bit/s IPv4 100000000000 m/s|1
+Unit|90 Watt|./tests/test_files/table_test.docx|Table: 1|164.192.1.2 12:eD:21:WC:Cb:11 1.1.c.2 90 Watt MAC mac Mac|1
+WiFi|802.11ac|./tests/test_files/table_test.docx|Table: 1|12 januari 2023 802.11ac|1
+Date|12 januari 2023|./tests/test_files/table_test.docx|Table: 1|MAC mac Mac 12 januari 2023 802.11ac|1
+Tech/Protocol|IPv4|./tests/test_files/table_test.docx|Table: 1|Not..valid@email.se 500 bit/s IPv4 100000000000 m/s FOI|1
+Tech/Protocol|MAC|./tests/test_files/table_test.docx|Table: 1|1.1.c.2 90 Watt MAC mac Mac 12|1

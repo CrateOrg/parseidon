@@ -1,0 +1,5 @@
+Object type|Object found|Filepath|Position|Context|Count
+Tech/Protocol|CAT5|./tests/test_files/chart_test.docx|Figure: 1|CAT5 dreaminess per protocol|1
+Tech/Protocol|Wifi|./tests/test_files/chart_test.docx|Figure: 1|word chart S1 Wifi Ethernet 802.11Q Bluetooth|1
+Tech/Protocol|Ethernet|./tests/test_files/chart_test.docx|Figure: 1|chart S1 Wifi Ethernet 802.11Q Bluetooth 4.3|1
+Tech/Protocol|Bluetooth|./tests/test_files/chart_test.docx|Figure: 1|Wifi Ethernet 802.11Q Bluetooth 4.3 2.5 3.5|1

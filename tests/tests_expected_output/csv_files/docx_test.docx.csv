@@ -1,0 +1,22 @@
+Object type|Object found|Filepath|Position|Context|Count
+IPv4|123.21.0.22|./tests/test_files/docx_test.docx|Paragraph: 1|123.21.0.22|1
+IPv4|164.0.2.2|./tests/test_files/docx_test.docx|Paragraph: 2|commodo consequat. Duis 164.0.2.2 aute irure dolor|1
+IPv4|2.2.0.2|./tests/test_files/docx_test.docx|Paragraph: 4|pariatur. Excepteur sint 2.2.0.2 occaecat cupidatat non|1
+IPv4|162.2.18.0|./tests/test_files/docx_test.docx|Table: 1|ID Mac URL 162.2.18.0 user@gmail.com FOI Memo|1
+IPv4|77.77.77.77|./tests/test_files/docx_test.docx|Table: 2|77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE|1
+MAC|ABDC.1132.4576|./tests/test_files/docx_test.docx|Paragraph: 24|id est laborum ABDC.1132.4576|1
+MAC|01:21:45:67:89:AB|./tests/test_files/docx_test.docx|Table: 1|FOI Memo 1234 01:21:45:67:89:AB https://dummyurl.se/in/a/table|1
+Doc_ID|FOI-R--1121--SE|./tests/test_files/docx_test.docx|Paragraph: 28|mollit anim id FOI-R--1121--SE est laborum.|1
+Doc_ID|FOI-X--9999--SE|./tests/test_files/docx_test.docx|Section: 1, first page header|FOI-X--9999--SE|1
+Doc_ID|FOI-X--0000--SE|./tests/test_files/docx_test.docx|Section: 1, default header|FOI-X--0000--SE|1
+Doc_ID|FOI Memo 1234|./tests/test_files/docx_test.docx|Table: 1|URL 162.2.18.0 user@gmail.com FOI Memo 1234 01:21:45:67:89:AB https://dummyurl.se/in/a/table|1
+Doc_ID|FOI-I--1337--SE|./tests/test_files/docx_test.docx|Table: 2|77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE|1
+URL|www.google.se|./tests/test_files/docx_test.docx|Paragraph: 17|anim id est www.google.se laborum.|1
+URL|http://properurlformat.yes|./tests/test_files/docx_test.docx|Paragraph: 29|deserunt mollit anim http://properurlformat.yes id est laborum.|1
+URL|https://dummyurl.se/in/a/table|./tests/test_files/docx_test.docx|Table: 1|Memo 1234 01:21:45:67:89:AB https://dummyurl.se/in/a/table|1
+Email|valid.email_address@outlook.orq|./tests/test_files/docx_test.docx|Paragraph: 14|fugiat nulla pariatur valid.email_address@outlook.orq . Excepteur sint|1
+Email|mailman@mailservice.nu|./tests/test_files/docx_test.docx|Paragraph: 27|aute irure dolor mailman@mailservice.nu in reprehenderit in|1
+Email|user@gmail.com|./tests/test_files/docx_test.docx|Table: 1|Mac URL 162.2.18.0 user@gmail.com FOI Memo 1234|1
+Email|another_valid@email.net|./tests/test_files/docx_test.docx|Table: 2|77.77.77.77 1.725.1.1 another_valid@email.net FOI-I--1337--SE|1
+Tech/Protocol|IP|./tests/test_files/docx_test.docx|Table: 1|IP Mail ID Mac|1
+Tech/Protocol|URL|./tests/test_files/docx_test.docx|Table: 1|Mail ID Mac URL 162.2.18.0 user@gmail.com FOI|1
