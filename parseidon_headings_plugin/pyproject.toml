@@ -1,0 +1,25 @@
+[project]
+name = "parseidon_headings_plugin"
+version = "1.2"
+authors = [
+    { name="William de Brun Mangs", email="william.de.brun.mangs@foi.se" },
+    { name="Adrian Rosén", email="adrian.rosen@foi.se" },
+]
+description = "Plugin removing IPv4-like headings in documents for parseidon"
+requires-python = ">=3.9"
+dependencies = ["parseidon>=2.2.6"]
+
+[project.entry-points."parseidon.plugins"]
+headings_plugin = "parseidon_headings_plugin.remove_headings:RemoveHeadingPlugin"
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "." }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]

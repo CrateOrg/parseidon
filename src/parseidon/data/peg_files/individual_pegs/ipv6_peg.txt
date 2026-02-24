@@ -1,0 +1,38 @@
+mult = (ipv6 / any)+
+ipv6 = pre (ipv4_embedded / ipv4_mapped / fe80 / base_ipv6 / comp) blocks? post
+comp = compressed7 / compressed6 / compressed5 / compressed4 / compressed3 / compressed2 / compressed1 / compressed0
+base_ipv6 = oct_col{7} octet
+compressed0 = oct_col{1,7} colon
+compressed1 = oct_col{1,6} col_oct
+compressed2 = oct_col{1,5} col_oct{1,2}
+compressed3 = oct_col{1,4} col_oct{1,3}
+compressed4 = oct_col{1,3} col_oct{1,4}
+compressed5 = oct_col{1,2} col_oct{1,5}
+compressed6 = oct_col col_oct{1,6}
+compressed7 = colon (col_oct{1,7} / colon)
+fe80 = "fe80" colon col_oct{0,4} ~"%[0-9a-zA-Z]+"
+ipv4_mapped = colon colon ("ffff" (colon zero{1,4})? colon)? ipv4_raw
+ipv4_embedded = oct_col{1,4} colon ipv4_raw
+oct_col = octet colon
+col_oct = colon octet
+octet = ~r"[0-9A-Fa-f]{1,4}"
+colon = ":"
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+

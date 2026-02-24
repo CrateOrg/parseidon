@@ -1,0 +1,6 @@
+0.0.0.0
+http://localhost
+2 kbit/s
+123.123.123.123
+Wi-Fi
+500 kg

@@ -1,0 +1,37 @@
+mult = (unit / any)+
+unit = pre (speed_dim / val_unit / len_dim / sound_dim) post
+val_unit = val " " ((prefixes? si_units) / (data_prefixes? data_units) / no_pre_units)
+len_dim = val (dim_sep val){0,2} " " ((prefixes? "m") / "m")
+sound_dim = (negativeval / val) " " ("dBm" / "dB")
+speed_dim = val " " ("m/s")
+dim_sep = ~r" x |x|\*| \* "
+no_pre_units = ~"[sK]|°C"
+si_units = "Hz" / "Watt" / "Wh" / "W" / "g" / "J" / "N" / "V" / "A" / "Ω"
+data_units = ~"(B|b(it)?)([/p]s)?"
+data_prefixes = ~"[kMGTPEZYRQ]i?"
+prefixes = ~"[qryzafpnµmcdkMGTPEZYRQ]"
+numval = int_val deci_val?
+negativeval = "-" numval
+val = range / numval
+range = numval "-" numval
+int_val = (onetonine digit{0,3}) / zero
+deci_val = ~r"[.,]\d{1,5}"
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+

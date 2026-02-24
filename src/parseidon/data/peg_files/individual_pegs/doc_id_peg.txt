@@ -1,0 +1,25 @@
+mult = (doc_id / any)+
+doc_id = pre (memo / report) post
+memo = "FOI Memo " four_digits
+report = "FOI" "-" letter "--" four_digits "--SE"
+letter = ~"[A-Z]"
+four_digits = digit{4}
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+

@@ -1,0 +1,25 @@
+mult = (email / any)+
+email = pre (local email_domain1) post
+local = local_char (dotordash local_char)* "@"
+local_char = ~r"[\w!#$%&'*\-+/=?^`{|}~]+"
+email_domain1 = ~r"([A-Za-z0-9-]+\.)+[A-Za-z]{2,7}"
+dotordash = "." / "-"
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+

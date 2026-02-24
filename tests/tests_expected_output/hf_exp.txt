@@ -1,0 +1,12 @@
+first_header@section1.se
+first_footer@section1.se
+www.evenheader.section1.com
+www.evenfooter.section1.com
+http://oddheader.se/section1
+http://oddfooter.se/section1
+first_header@section2.se
+first_footer@section2.se
+https://oddheader.nu/section2
+https://oddfooter.nu/section2
+https://evenheader.nu/section2
+https://evenfooter.nu/section2

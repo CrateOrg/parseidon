@@ -1,0 +1,20 @@
+164.0.2.2
+2.2.0.2
+162.2.18.0
+123.21.0.22
+77.77.77.77
+FOI-X--9999--SE
+FOI Memo 1234
+FOI-R--1121--SE
+FOI-I--1337--SE
+user@gmail.com
+valid.email_address@outlook.orq
+mailman@mailservice.nu
+another_valid@email.net
+01:21:45:67:89:AB
+ABDC.1132.4576
+www.google.se
+http://properurlformat.yes
+FOI-X--0000--SE
+IP
+URL

@@ -1,0 +1,69 @@
+[project]
+name = "parseidon"
+version = "2.3.0"
+authors = [
+    { name="William de Brun Mangs", email="william.de.brun.mangs@foi.se" },
+    { name="Adrian Rosén", email="adrian.rosen@foi.se" },
+]
+description = "A tool for automating the process of extracting relevant information from text documents"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    # Reading SVG files
+    "cairosvg>=2.8",
+    # Parsing word documents
+    "python-docx>=1.2",
+    "typing-extensions>=4.14",
+    "lxml>=6.0",
+    "lxml-stubs>=0.5",
+    # Parsing excel files and loading cell and image texts into dataframes
+    "pandas>=2.3",
+    "numpy",
+    "openpyxl>=3.1",
+    # Loading image objects
+    "pillow>=11.3",
+    # Parsing pdf documents
+    "pymupdf>=1.26",
+    # Extracting text from images with OCR
+    "pytesseract>=0.3",
+    "pluggy>=1.6",
+    # Identify unknown plaintext/image files
+    "python-magic>=0.4",
+    # Read regex yaml files
+    "pyyaml>=6.0",
+    # Peg parsing
+    "parsimonious>=0.10",
+    "regex==2025.9.1",
+    # Creating a trie
+    "marisa-trie>=1.3",
+    # Fix text
+    "ftfy==6.3.1",
+]
+
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+parseidon = ["data/**/*"]
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools_scm]
+
+[dependency-groups]
+dev = [
+    "pip-audit>=2.9.0",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+]
+
+[project.scripts]
+parseidon = "parseidon.main:main"

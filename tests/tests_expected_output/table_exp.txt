@@ -1,0 +1,13 @@
+https://merged-vertically.se
+500 bit/s
+IPv4
+FOI Memo 1234
+http://localhost:1415
+::FF
+merged_horizontal@gmail.se
+AA:B3:12:CE:F0:00
+164.192.1.2
+90 Watt
+MAC
+12 januari 2023
+802.11ac

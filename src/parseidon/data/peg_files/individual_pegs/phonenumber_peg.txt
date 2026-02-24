@@ -1,0 +1,36 @@
+mult = (phonenumber / any)+
+phonenumber = pre pn_prefix ((&(ten_digit post) ten_digit) / (&(nine_digit post) nine_digit) / eight_digit) post
+ten_digit = ten_1 / ten_2 / ten_3
+nine_digit = nine_1 / nine_2 / nine_3
+eight_digit = eight_1 / eight_2
+ten_1 = eightdash digit{3} space digit{3} space digit{2}
+ten_2 = digit{2} dash digit{3} space digit{2} space digit{2}
+ten_3 = digit{3} dash digit{2} space digit{2} space digit{2}
+nine_1 = eightdash digit{3} space digit{2} space digit{2}
+nine_2 = digit{2} dash digit{2} space digit{2} space digit{2}
+nine_3 = digit{3} dash digit{3} space digit{2}
+eight_1 = eightdash digit{2} space digit{2} space digit{2}
+eight_2 = digit{2} dash digit{3} space digit{2}
+pn_prefix = "0" / ((long_pre &(ten_digit / nine_digit / eight_digit)) / pre_digits)
+pre_digits = ~r"\+[1-9][0-9]?"
+long_pre = ~r"\+[1-9][0-9]{2}"
+eightdash = "8-"
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+

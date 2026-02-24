@@ -1,0 +1,40 @@
+mult = (tech_prot / any)+
+tech_prot = (pre (tech / prot) tp_post) / ipaddr
+tech = eth / wifi_str / rj45 / bt  / cat 
+prot = uart / ssh / http / mac_str / uri / transmission / dns / telnet / mqtt / amqp
+ipaddr = pre ~"IP(v[46]|[- ][aA]dd?ress)?" post
+telnet = ~"[Tt]elnet"
+dns = "DNS" / "dns"
+transmission = ("TC" / "UD" / "FT") "P"
+uri = ~"UR[IL]|ur[il]"
+cat = ~"CAT[1-8]"
+mac_str = "MAC"
+bt = ~"[Bb]luetooth|BLUETOOTH"
+http = ~"https?|HTTPS?"
+ssh = "ssh" / "SSH"
+uart = "UART"
+rj45 = "RJ45"
+wifi_str = ~"Wi-?Fi|[Ww]i-?fi"
+eth = ~"[Ee]thernet|ETHERNET"
+mqtt = ~"[Mm]qtt|MQTT"
+amqp = ~"[Aa]mqp|AMQP"
+tp_post = post / &("-")
+
+any = ~r"(.|\s)+?(?=((?<=[\s\"\”(])|^).)" / ~r"(.|\s)+"
+pre = ~r"((?<=[\s\"\”(])|^)"
+post = ~r"(?=(([.,\"\”])|\),?)\s|\s|$)"
+space = " "
+dash = "-"
+zero = "0"
+one = "1"
+onetotwo = ~"[1-2]"
+onetonine = ~"[1-9]"
+digit = ~"[0-9]"
+num = twofifty / twohun / hun / tens
+twofifty = ~"25[0-5]"
+twohun = ~"2[0-4][0-9]"
+hun = one digit{2}
+tens = ~"[1-9]?[0-9]"
+blocks = ~r"/(0|[1-9][0-9]?)"
+ipv4_raw = (num "."){3} num blocks?
+
