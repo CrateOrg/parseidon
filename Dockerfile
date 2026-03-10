@@ -1,5 +1,5 @@
 # ---- Build stage ----
-FROM ghcr.io/astral-sh/uv:python3.12-alpine AS build
+FROM ghcr.io/astral-sh/uv:python3.13-alpine AS build
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
 ENV UV_PYTHON_DOWNLOADS=0
 WORKDIR /app
@@ -12,7 +12,7 @@ RUN uv sync --frozen --no-dev --no-install-project
 RUN uv build --wheel
 
 # ---- Base image ----
-FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim AS base
+FROM ghcr.io/astral-sh/uv:python3.13-trixie-slim AS base
 
 WORKDIR /app
 
