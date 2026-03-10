@@ -52,7 +52,7 @@ You can use the prebuilt image to run parseidon with Docker. Prebuilt images can
 docker run --rm -it --entrypoint /bin/bash ghcr.io/crateorg/parseidon:latest
 
 # Or run specific version
-docker run --rm -it --entrypoint /bin/bash ghcr.io/crateorg/parseidon:2.3.0
+docker run --rm -it --entrypoint /bin/bash ghcr.io/crateorg/parseidon:2.3.1
 ```
 
 #### Manually build image
