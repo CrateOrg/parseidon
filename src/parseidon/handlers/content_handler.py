@@ -10,7 +10,7 @@ from parseidon.files.pdf_file import PdfFile
 from parseidon.handlers.content import Content
 from parseidon.handlers.file_handler import FileHandlerOutput
 from parseidon.handlers.handler import Handler
-from parseidon.plugin_manager import load_plugins
+from parseidon.plugin_manager import PluginManager
 
 ContentHandlerInput = FileHandlerOutput
 ContentHandlerOutput = Sequence[Tuple[File | pymupdf.Document, Sequence[Content]]]
@@ -38,7 +38,7 @@ class ContentHandler(Handler[ContentHandlerInput, ContentHandlerOutput]):
         super().__init__()
         self.draw_boxes = draw_boxes
         self.num_threads = num_threads
-        self.pm = load_plugins()
+        self.pm = PluginManager.get_plugin_manager()
         self.trie = trie
 
     def handle_input(

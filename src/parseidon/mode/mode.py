@@ -13,6 +13,7 @@ class ModeConfig(Protocol):
     image_extract: bool
     skip_list: str | None
     trie_file: str
+    enable_plugins: bool
 
 
 class ProgramMode(ABC):
@@ -37,6 +38,7 @@ class ProgramMode(ABC):
         self.image_extract = config.image_extract
         self.skip_list = self._get_skip_list(config.skip_list)
         self.trie = config.trie_file
+        self.enable_plugins = config.enable_plugins
 
     @staticmethod
     def _add_general_settings(mode_subparser: ArgumentParser):
@@ -69,6 +71,14 @@ class ProgramMode(ABC):
             dest="trie_file",
             help="Path to trie structure file",
             default="trie/swedish.marisa",
+        )
+        mode_subparser.add_argument(
+            "-e",
+            "--enable-plugins",
+            dest="enable_plugins",
+            action=argparse.BooleanOptionalAction,
+            help="To enable PIP installed plugins, this flag must be set",
+            default=False,
         )
 
     @staticmethod

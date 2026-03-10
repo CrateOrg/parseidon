@@ -14,6 +14,7 @@ from parseidon.handlers.matcher_handlers.filter_matcher_handler import (
 from parseidon.handlers.output_handler import OutputFormat, OutputHandler, OutputMode
 from parseidon.helpers.resource_loader import file_exists
 from parseidon.mode.mode import ModeConfig, ProgramMode
+from parseidon.plugin_manager import PluginManager
 
 
 @dataclass
@@ -27,6 +28,7 @@ class FilterModeConfig(ModeConfig):
     trie_file: str
     ignore_punctuation: bool
     skip_list: str | None
+    enable_plugins: bool
 
 
 class FilterMode(ProgramMode):
@@ -54,6 +56,7 @@ class FilterMode(ProgramMode):
             args.trie_file,
             args.ignore_punctuation,
             args.skip_list,
+            args.enable_plugins,
         )
 
     def __init__(self, config: FilterModeConfig) -> None:
@@ -115,6 +118,7 @@ class FilterMode(ProgramMode):
         Parameters:
             inputs (Sequence): List of filepaths of files to be handled
         """
+        PluginManager.init_plugin_manager(self.enable_plugins)
         chain = Chain()
 
         chain.add_handler(FileHandler(self.image_extract, self.column_context))

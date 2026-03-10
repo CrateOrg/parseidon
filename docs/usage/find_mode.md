@@ -59,3 +59,6 @@ Flags/keyword arguments:
 
 * `--pegparse, -p`
     - Keyword argument to specify pegparse should be used for pattern matching.
+
+* `--enable-plugins, -e`
+    - Enables the use of installed plugins.

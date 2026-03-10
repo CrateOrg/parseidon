@@ -110,6 +110,7 @@ def test_filter_mode_valid_args():
     args.draw_boxes = True
     args.output_format = None
     args.skip_list = None
+    args.enable_plugins = False
 
     mode = FilterMode.from_args(args)
     assert mode.output == args.output
@@ -120,6 +121,7 @@ def test_filter_mode_valid_args():
     assert mode.draw_boxes == args.draw_boxes
     assert mode.num_threads == 2
     assert mode.output_format == OutputFormat.PDF
+    assert mode.enable_plugins == args.enable_plugins
 
 
 @pytest.mark.parametrize(
@@ -139,6 +141,7 @@ def test_bad_grammar(program, grammar_file):
     args.draw_boxes = False
     args.command = program
     args.trie_file = trie_file
+    args.enable_plugins = False
     with pytest.raises((ValueError, ParseError)):
         program_factory(args)
 
@@ -164,6 +167,7 @@ def test_find_mode_args():
     args.skip_list = None
     args.match_grammar_file = None
     args.command = "find"
+    args.enable_plugins = True
 
     mode = program_factory(args)
     assert type(mode) == FindMode
@@ -172,3 +176,4 @@ def test_find_mode_args():
     assert mode.num_threads == 2
     assert mode.mode == "regex"
     assert mode.grammar != None
+    assert mode.enable_plugins == args.enable_plugins

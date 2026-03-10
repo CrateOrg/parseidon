@@ -17,6 +17,7 @@ from parseidon.handlers.matcher_handlers.regex_matcher_handler import (
 from parseidon.handlers.output_handler import OutputFormat, OutputHandler, OutputMode
 from parseidon.helpers.resource_loader import file_exists, open_file
 from parseidon.mode.mode import ModeConfig, ProgramMode
+from parseidon.plugin_manager import PluginManager
 
 
 @dataclass
@@ -31,6 +32,7 @@ class RegexModeConfig(ModeConfig):
     skip_list: str | None
     type_filter: list | None
     trie_file: str
+    enable_plugins: bool
 
 
 class RegexMode(ProgramMode):
@@ -59,6 +61,7 @@ class RegexMode(ProgramMode):
             args.skip_list,
             None,
             args.trie_file,
+            args.enable_plugins,
         )
 
     def __init__(self, config: RegexModeConfig) -> None:
@@ -149,6 +152,7 @@ class RegexMode(ProgramMode):
         Parameters:
             inputs (Sequence): List of filepaths of files to be handled
         """
+        PluginManager.init_plugin_manager(self.enable_plugins)
         chain = Chain()
 
         chain.add_handler(FileHandler(self.image_extract, self.column_context))

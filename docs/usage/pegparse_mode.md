@@ -66,3 +66,5 @@ Flags/keyword arguments:
 * `--num-threads, -n <number of threads>`
     - Number of threads to spawn during content extraction.
 
+* `--enable-plugins, -e`
+    - Enables the use of installed plugins.

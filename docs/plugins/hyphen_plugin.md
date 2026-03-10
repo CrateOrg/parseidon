@@ -10,6 +10,8 @@ To install the hyphen plugin, follow the guide on installing the core package([i
 pip install parseidon-hyphen-plugin
 ```
 
+Make use to use `-e` option when running parseidon to enable plugin use.
+
 #### Install local version
 ```bash
 pip install -e parseidon_hyphen_plugin
