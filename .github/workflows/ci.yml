@@ -5,7 +5,21 @@ name: CI
 on:
   push:
     branches: [ "*" ]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - '*_plugin/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.pytest.ini'
   pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - '*_plugin/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.pytest.ini'
   workflow_call:
 
 permissions:
