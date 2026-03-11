@@ -1,6 +1,6 @@
 [project]
 name = "parseidon"
-version = "2.3.1"
+version = "2.3.2"
 authors = [
     { name="William de Brun Mangs", email="william.de.brun.mangs@foi.se" },
     { name="Adrian Rosén", email="adrian.rosen@foi.se" },
