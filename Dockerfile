@@ -30,8 +30,6 @@ RUN apt-get update && \
 # ---- Final image ----
 FROM base AS runtime
 
-ENV TZ="Europe/Stockholm"
-
 WORKDIR /app
 
 COPY --from=build /app/dist/*.whl /tmp/
