@@ -1,9 +1,9 @@
 [project]
 name = "parseidon"
 version = "2.3.3"
+license = { file = "LICENSE" }
 authors = [
-    { name="William de Brun Mangs", email="william.de.brun.mangs@foi.se" },
-    { name="Adrian Rosén", email="adrian.rosen@foi.se" },
+    { name="Parseidon Dev Team", email="parseidon@foi.se" },
 ]
 description = "A tool for automating the process of extracting relevant information from text documents"
 readme = "README.md"
@@ -42,6 +42,11 @@ dependencies = [
     # Fix text
     "ftfy==6.3.1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/CrateOrg/parseidon"
+Repository = "https://github.com/CrateOrg/parseidon"
+Changelog = "https://github.com/CrateOrg/parseidon/releases"
 
 [build-system]
 requires = ["setuptools", "wheel", "setuptools_scm"]

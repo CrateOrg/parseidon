@@ -1,4 +1,10 @@
 # Parseidon
+
+![PyPI](https://img.shields.io/pypi/v/parseidon)
+![Python](https://img.shields.io/pypi/pyversions/parseidon)
+![License](https://img.shields.io/github/license/CrateOrg/parseidon)
+![Tests](https://img.shields.io/github/actions/workflow/status/CrateOrg/parseidon/ci.yml)
+
 Parseidon is a document parsing text extracting tool written in Python. The purpose of parseidon is to let the user extract strings that match a desired predefined format using either regex or PEG for pattern matching. Additionally the filter mode of parseidon uses vocabulary data to filter out common words, leaving uncommon strings that might be of interest. The pattern matching and the filtering functionality can also be used together in the find mode, letting the filter assist the user in identifying words not covered by their regexes or PEGs
 
 ## Modes
