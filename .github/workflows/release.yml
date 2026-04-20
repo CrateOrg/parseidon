@@ -122,6 +122,12 @@ jobs:
       # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
       # ALTERNATIVE: exactly, uncomment the following line instead:
       # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
+    strategy:
+      matrix:
+        pkg:
+          - pip-artifacts/parseidon
+          - pip-artifacts/plugins/parseidon_headings_plugin
+          - pip-artifacts/plugins/parseidon_hyphen_plugin
     steps:
       - name: Retrieve release distributions
         uses: actions/download-artifact@v5
@@ -133,4 +139,5 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           print-hash: true
-          packages-dir: pip-artifacts/parseidon/
+          skip-existing: true
+          packages-dir: ${{ matrix.pkg }}

@@ -1,13 +1,17 @@
 [project]
-name = "parseidon_hyphen_plugin"
+name = "parseidon-hyphen-plugin"
 version = "1.5"
+license = { text = "MIT" }
 authors = [
-    { name="William de Brun Mangs", email="william.de.brun.mangs@foi.se" },
-    { name="Adrian Rosén", email="adrian.rosen@foi.se" },
+    { name="Parseidon Dev Team", email="parseidon@foi.se" },
 ]
 description = "Plugin for handling hyphens in compound words for parseidon"
 requires-python = ">=3.9"
 dependencies = ["parseidon>=2.2.6"]
+
+[project.urls]
+Homepage = "https://github.com/CrateOrg/parseidon"
+Repository = "https://github.com/CrateOrg/parseidon"
 
 [project.entry-points."parseidon.plugins"]
 hyphen_plugin = "parseidon_hyphen_plugin.dehyphenate:DehyphenatePlugin"
