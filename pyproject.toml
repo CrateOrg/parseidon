@@ -1,6 +1,6 @@
 [project]
 name = "parseidon"
-version = "2.3.3"
+version = "2.3.4"
 license = { file = "LICENSE" }
 authors = [
     { name="Parseidon Dev Team", email="parseidon@foi.se" },

@@ -68,7 +68,7 @@ jobs:
         run: uv venv
 
       - name: Install the code linting and formatting tool Ruff
-        run: uv pip install ruff
+        run: uv pip install ruff==0.15.12
 
       - name: Lint code with Ruff
         run: uv run ruff check --exclude=tests --extend-exclude=.venv --output-format=github
